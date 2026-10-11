@@ -7,7 +7,7 @@ import "./index.css";
 const API = import.meta.env.VITE_API_URL ?? "http://localhost:4000";
 
 // ?wakeit=off  -> plain app (the "before" test). Anything else -> app wrapped in WakeIt.
-const wakeitOn = new URLSearchParams(window.location.search).get("wakeit") !== "off";
+const wakeitOn = new URLSearchParams(window.location.search).get("wakeit")?.toLowerCase() !== "off";
 
 function WithWakeIt() {
   const { isReady } = useWakeIt();
