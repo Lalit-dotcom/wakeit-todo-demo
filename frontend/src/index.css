@@ -1,0 +1,3 @@
+@import "tailwindcss";
+/* Tailwind skips node_modules by default, so point it at the WakeIt banner's classes. */
+@source "../node_modules/@lalit_kumar/wakeit/dist";
